@@ -1,0 +1,27 @@
+<h1>Create a new Superhero Team!</h1>
+
+<form action='/teams' method="POST">
+  <p>
+    <label for="team-name">What is your team called?</label>
+    <input type="text" name="name" id="team-name" />
+    <label for="team-motto">Your team has a motto, right?</label>
+    <input type="text" name="motto" id="team-motto" />
+  </p>
+  <br>
+  <h2>Input up to 5 team members!</h2>
+  
+  <% 5.times do |number|%>
+  <br>
+  <p>
+    <label for="super-<%= number %>-name">Hero name:</label>
+    <input type="text" name="super_heros[super<%= number %>][name]" id="super-<%= number %>-name">
+
+    <label for="super-<%= number %>-power">Super Power:</label>
+    <input type="text" name="super_heros[super<%= number %>][power]" id="super-<%= number %>-power">
+
+    <label for="super-<%= number %>-bio">Biography:</label>
+    <input type="text" name="super_heros[super<%= number %>][biography]" id="super-<%= number %>-bio">
+  <% end %>
+  <br><br>
+  <input type="submit" value="Submit" />
+</form>
