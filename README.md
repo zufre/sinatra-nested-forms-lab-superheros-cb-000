@@ -1,5 +1,5 @@
 ---
-  tags: sinatra, forms
+  tags: sinatra, forms, nested params, intermediate
   langauges: ruby
   resources: 4
 ---
@@ -17,10 +17,10 @@ In this lab, you'll practice building nested forms in Sinatra for creating teams
 
 ### Make a form
 
-1. Create a route that responds to a GET request at `/teams/new`.
-2. Create a view and render it in the GET `/teams/new` route.
+1. Create a route that responds to a GET request at `/`.
+2. Create a view with a form and render it in the GET `/` route.
 3. The form should have fields for the `name` of a superhero team and their `motto`.
-4. There should be form inputs for each superhero member's `name`, `power`, and `bio`.
+4. There should be form inputs for each of the three superhero member's `name`, `power`, and `bio`.
 
 It should look something like this:
 
@@ -30,7 +30,7 @@ It should look something like this:
 
 1. Create a route that responds to a POST request at `/teams`
 2. Have the form send a POST request to this route.
-2. Render a template that displays the submitted team data and each member's data.
+2. Upon submission, render a template that displays the submitted team data and each member's data.
 
 ## Final Output
 
@@ -45,6 +45,10 @@ When you post to this form you should render a page that displays the name of th
 Your view should display something like this:
 
 ![Imgur](http://i.imgur.com/SzO0phP.png?1)
+
+## Deliverables
+
+Pass the tests!
 
 ## Resources
 * [HTML5 In Action](http://books.flatironschool.com/books/79) - [Forms and validation](http://books.flatironschool.com/books/79), page 35

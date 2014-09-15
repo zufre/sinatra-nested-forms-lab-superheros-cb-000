@@ -2,22 +2,22 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   get '/' do
-    erb :"index.html"
+    erb :super_hero
   end
 
-  get '/teams/new' do
-    erb :"new_team.html"
-  end
-
-  post '/teams' do
-    params["super_heros"] = params["super_heros"].map do |hero, attributes|
-      SuperHero.create(attributes)
+  post '/team' do
+    @team_name = params[:team][:name]
+    @team_motto = params[:team][:motto]
+    @hero_name = []
+    @hero_power = []
+    @hero_bio = []
+    @team_members = params[:team][:members]
+    @team_members.each do |hero, attrib|
+      @hero_name << attrib[:name]
+      @hero_power << attrib[:power]
+      @hero_bio << attrib[:bio]
     end
-    redirect to "teams/#{Team.create(params).id}"
-  end
 
-  get '/teams/:id' do
-    @team = Team.find_by(id: params[:id])
-    erb :"team.html"
+    erb :team
   end
 end
