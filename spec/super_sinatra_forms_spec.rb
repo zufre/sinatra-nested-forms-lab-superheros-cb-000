@@ -46,8 +46,16 @@ describe App do
       expect(last_response.status).to eq(200)
     end
 
-    it 'displays the team info upon submission' do 
+    it 'displays the team info name upon submission' do 
+      expect(last_response.body).to include("Team Ruby")
+    end
+
+    it 'displays the team motto upon submission' do 
       expect(last_response.body).to include("We love Ruby!")
+    end
+
+    it 'shows team member info' do 
+      expect(last_response.body).to include("Amanda")
     end
   end
 end
