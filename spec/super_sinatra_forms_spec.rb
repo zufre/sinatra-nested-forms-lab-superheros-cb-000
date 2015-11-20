@@ -16,7 +16,8 @@ describe App do
   end
 
   describe 'POST /teams' do
-    before do
+      visit '/'
+      fill_in 
       post '/teams', {
         :team => {
           :name => "Team Ruby",
@@ -56,6 +57,8 @@ describe App do
 
     it 'shows team member info' do 
       expect(last_response.body).to include("Amanda")
+      expect(last_response.body).to include("Arel")
+      expect(last_response.body).to include("Katie")
     end
   end
 end
