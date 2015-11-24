@@ -6,9 +6,6 @@ In this lab, you'll practice building nested forms in Sinatra for creating teams
 
 ## Instructions
 
-1. `bundle install`
-2. `bundle exec shotgun`
-
 ### Make a form
 
 1. Create a route that responds to a GET request at `/`.
