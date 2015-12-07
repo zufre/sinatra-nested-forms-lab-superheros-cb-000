@@ -1,13 +1,11 @@
-# Superheroes!
+# Sinatra Nested Forms Lab: Superheroes!
 
-## Description
+## Overview
+
 
 In this lab, you'll practice building nested forms in Sinatra for creating teams of superheros. No database is required, but feel free to add persistence *after* you have successfully completed the instructions below.
 
 ## Instructions
-
-1. `bundle install`
-2. `bundle exec shotgun`
 
 ### Make a form
 
@@ -45,7 +43,10 @@ Your view should display something like this:
 Pass the tests!
 
 ## Resources
-* [HTML5 In Action](http://books.flatironschool.com/books/79) - [Forms and validation](http://books.flatironschool.com/books/79), page 35
-* [Sinatra Up and Running](http://books.flatironschool.com/books/101) - [Routes with Parameters](http://books.flatironschool.com/books/101), page 34
+
 * [Ashley William's GitHub](https://github.com/ashleygwilliams/) - [Sinatra Form Party](https://github.com/ashleygwilliams/sinatra-form-party)
+
 * [Ashley William's GitHub](https://github.com/ashleygwilliams/) - [Citibike Sinatra](https://github.com/ashleygwilliams/citibike-sinatra)
+
+<a href='https://learn.co/lessons/super-sinatra-forms' data-visibility='hidden'>View this lesson on Learn.co</a>
+
