@@ -26,10 +26,15 @@ It should look something like this:
 
 ## Final Output
 
-Your params should be nested. For example, you would access the first super-hero's name as:
+Your params should be nested. For example, in order to see all the super heros for the team you just created you would enter: 
 
 ```ruby
-params["team"]["members"][0][name]
+params["team"]["members"]
+```
+If you wanted to access the first super-hero's name, you would enter:
+
+```ruby
+params["team"]["members"][0]["name"]
 ```
 
 When you post to this form you should render a page that displays the name of the team and each member of the team, along with their name, super power and bio.
