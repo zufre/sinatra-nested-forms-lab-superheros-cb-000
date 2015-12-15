@@ -2,6 +2,7 @@
 
 ## Overview
 
+
 In this lab, you'll practice building nested forms in Sinatra for creating teams of superheros. No database is required, but feel free to add persistence *after* you have successfully completed the instructions below.
 
 ## Instructions
@@ -25,10 +26,15 @@ It should look something like this:
 
 ## Final Output
 
-Your params should be nested. For example, you would access the first super-hero's name as:
+Your params should be nested. For example, in order to see all the super heros for the team you just created you would enter: 
 
 ```ruby
-params["team"]["members"][0][name]
+params["team"]["members"]
+```
+If you wanted to access the first super-hero's name, you would enter:
+
+```ruby
+params["team"]["members"][0]["name"]
 ```
 
 When you post to this form you should render a page that displays the name of the team and each member of the team, along with their name, super power and bio.
@@ -39,11 +45,25 @@ Your view should display something like this:
 
 ## Deliverables
 
-Pass the tests!
+Pass the tests! You'll notice in `super_sinatra_spec.rb` in the`it submits the form` test for `'POST /teams'`, we use the Capybara method `fill_in`:
+
+```ruby
+fill_in("member1_name", :with => "Amanda")
+fill_in("member1_power", :with => "Ruby")
+fill_in("member1_bio", :with => "I love Ruby!")
+```
+
+The same pattern follows for the second and third super heros. The word in quotes after `fill_in` needs to be set as an ID in the form to create the super heros:
+
+```html
+<input id="member1_name" type="text" name="team[members][][name]" >
+```
 
 ## Resources
+
 * [Ashley William's GitHub](https://github.com/ashleygwilliams/) - [Sinatra Form Party](https://github.com/ashleygwilliams/sinatra-form-party)
 
 * [Ashley William's GitHub](https://github.com/ashleygwilliams/) - [Citibike Sinatra](https://github.com/ashleygwilliams/citibike-sinatra)
 
 <a href='https://learn.co/lessons/super-sinatra-forms' data-visibility='hidden'>View this lesson on Learn.co</a>
+
