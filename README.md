@@ -56,7 +56,7 @@ fill_in("member1_bio", :with => "I love Ruby!")
 The same pattern follows for the second and third super heros. The word in quotes after `fill_in` needs to be set as an ID in the form to create the super heros:
 
 ```html
-<input type="text" id="member1_name" name="team[member][][name]"
+<input id="member1_name" type="text" name="team[members][][name]" >
 ```
 
 ## Resources
