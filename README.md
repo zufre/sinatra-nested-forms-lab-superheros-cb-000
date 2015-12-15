@@ -45,7 +45,19 @@ Your view should display something like this:
 
 ## Deliverables
 
-Pass the tests!
+Pass the tests! You'll notice in `super_sinatra_spec.rb` in the`it submits the form` test for `'POST /teams'`, we use the Capybara method `fill_in`:
+
+```ruby
+fill_in("member1_name", :with => "Amanda")
+fill_in("member1_power", :with => "Ruby")
+fill_in("member1_bio", :with => "I love Ruby!")
+```
+
+The same pattern follows for the second and third super heros. The word in quotes after `fill_in` needs to be set as an ID in the form to create the super heros:
+
+```html
+<input type="text" id="member1_name" name="team[member][][name]"
+```
 
 ## Resources
 
