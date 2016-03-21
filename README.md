@@ -3,7 +3,7 @@
 ## Overview
 
 
-In this lab, you'll practice building nested forms in Sinatra for creating teams of superheros. No database is required, but feel free to add persistence *after* you have successfully completed the instructions below.
+In this lab, you'll practice building nested forms in Sinatra for creating teams of superheroes. No database is required, but feel free to add persistence *after* you have successfully completed the instructions below.
 
 ## Instructions
 
@@ -26,12 +26,12 @@ It should look something like this:
 
 ## Final Output
 
-Your params should be nested. For example, in order to see all the super heros for the team you just created you would enter: 
+Your params should be nested. For example, in order to see all the superheroes for the team you just created you would enter: 
 
 ```ruby
 params["team"]["members"]
 ```
-If you wanted to access the first super-hero's name, you would enter:
+If you wanted to access the first superhero's name, you would enter:
 
 ```ruby
 params["team"]["members"][0]["name"]
@@ -53,7 +53,7 @@ fill_in("member1_power", :with => "Ruby")
 fill_in("member1_bio", :with => "I love Ruby!")
 ```
 
-The same pattern follows for the second and third super heros. The word in quotes after `fill_in` needs to be set as an ID in the form to create the super heros:
+The same pattern follows for the second and third superheroes. The word in quotes after `fill_in` needs to be set as an ID in the form to create the superheroes:
 
 ```html
 <input id="member1_name" type="text" name="team[members][][name]" >
@@ -67,3 +67,5 @@ The same pattern follows for the second and third super heros. The word in quote
 
 <a href='https://learn.co/lessons/super-sinatra-forms' data-visibility='hidden'>View this lesson on Learn.co</a>
 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-nested-forms-lab-superheros'>Sinatra Nested Forms Lab: Superheros!</a> on Learn.co and start learning to code for free.</p>
