@@ -2,7 +2,6 @@
 
 ## Overview
 
-
 In this lab, you'll practice building nested forms in Sinatra for creating teams of superheroes. No database is required, but feel free to add persistence *after* you have successfully completed the instructions below.
 
 ## Instructions
@@ -16,7 +15,7 @@ In this lab, you'll practice building nested forms in Sinatra for creating teams
 
 It should look something like this:
 
-![Imgur](http://i.imgur.com/zrbFWNE.png?1)
+![super_hero.erb](http://i.imgur.com/Ws3nCIC.png)
 
 ### Handle form submission
 
@@ -41,7 +40,7 @@ When you post to this form you should render a page that displays the name of th
 
 Your view should display something like this:
 
-![Imgur](http://i.imgur.com/SzO0phP.png?1)
+![team.erb](http://i.imgur.com/SsVQ5e0.png)
 
 ## Deliverables
 
@@ -56,7 +55,7 @@ fill_in("member1_bio", :with => "I love Ruby!")
 The same pattern follows for the second and third superheroes. The word in quotes after `fill_in` needs to be set as an ID in the form to create the superheroes:
 
 ```html
-<input id="member1_name" type="text" name="team[members][][name]" >
+<input id="member1_name" type="text" name="team[members][][name]">
 ```
 
 ## Resources
@@ -65,7 +64,4 @@ The same pattern follows for the second and third superheroes. The word in quote
 
 * [Ashley William's GitHub](https://github.com/ashleygwilliams/) - [Citibike Sinatra](https://github.com/ashleygwilliams/citibike-sinatra)
 
-<a href='https://learn.co/lessons/super-sinatra-forms' data-visibility='hidden'>View this lesson on Learn.co</a>
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-nested-forms-lab-superheros'>Sinatra Nested Forms Lab: Superheros!</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-nested-forms-lab-superheros'>Sinatra Nested Forms Lab: Superheroes!</a> on Learn.co and start learning to code for free.</p>
