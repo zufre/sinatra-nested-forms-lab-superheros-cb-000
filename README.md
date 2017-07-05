@@ -19,7 +19,7 @@ It should look something like this:
 
 ### Handle form submission
 
-1. Create a route that responds to a POST request at `/teams`
+1. Create a route that responds to a POST request at `/teams`.
 2. Have the form send a POST request to this route.
 2. Upon submission, render a template that displays the submitted team data and each member's data.
 
@@ -57,6 +57,8 @@ The same pattern follows for the second and third superheroes. The word in quote
 ```html
 <input id="member1_name" type="text" name="team[members][][name]">
 ```
+
+***NOTE***: If you run into any trouble with Sinatra's default configuration, such as needing to set the `views` directory for a particular controller (or to something other than the default `views` folder at the top level of your application directory), take a spin through the [Sinatra configuration documentation](http://www.sinatrarb.com/configuration.html), the [Getting Started guide](http://www.sinatrarb.com/intro), or the old standbys, Google and StackOverflow.
 
 ## Resources
 
